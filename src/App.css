@@ -318,7 +318,7 @@ rc-tabs {
     margin-bottom:16px
   }
 }
-@media only screen and (min-width:415px) and (max-width:540px){
+/* @media only screen and (min-width:415px) and (max-width:540px){
   .header-input{
     width:430px;
     margin-top:0px;
@@ -367,4 +367,4 @@ rc-tabs {
   .tab-column{
     margin-bottom:16px
   }
-}
+} */
