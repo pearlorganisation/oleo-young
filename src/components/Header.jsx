@@ -8,14 +8,14 @@ export default function Header(){
             <div className="row">
                 <div className="col-md-12">
                 <div className="row">
-                    <div className="col-md-1 col-1">
+                    <div className="col-md-1 col-2">
                     {/* <img className="header-logo" src="headerlogo.png" alt="..." /> */}
                     <i className="ri-home-2-fill header-logo"></i>
                     </div>
-                    <div className="col-md-2 col-6">
+                    <div className="col-md-2 col-8 mx-auto">
                     <h2 className="header-heading">OLEO YOUNG</h2>
                     </div>
-                    <div className="col-md-4 col-5">
+                    <div className="col-md-4 ">
                     <input type="search" placeholder="search" className="form-control header-input" id="exampleInputEmail1" aria-describedby="emailHelp" />
                     </div>
                     <div className="col-md-5 mb-3">

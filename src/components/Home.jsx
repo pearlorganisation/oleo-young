@@ -212,7 +212,7 @@ export default function Home() {
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
-      items: 2
+      items: 1
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
@@ -222,7 +222,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="container-fluid p-0">
+      <div className="container-fluid home-container p-0">
 
         {/* top picks for you  */}
 
@@ -252,12 +252,12 @@ export default function Home() {
                       return (
 
                         <>
-                          <div className="col-md-8 mx-auto top-pick-carousel-col">
+                          <div className="col-md-8 col-8 mx-auto top-pick-carousel-col">
                             <div>
                               <div className="card card-display">
                                 <img src={e.url} className="card-img-top top-pick-image" alt="..." />
                                 <div className="card-body">
-                                  <h5 className="card-title">{e.title}</h5>
+                                  <h5 className="card-title card-title-1">{e.title}</h5>
                                   <a href="#" className="btn btn-primary first-card-btn">Buy Now</a>
                                 </div>
                               </div>
@@ -278,12 +278,10 @@ export default function Home() {
 
         </div>
 
-
-
         {/* Real Time View Ranking */}
 
          <div className="row">
-          <div className="col-md-8 mx-auto tab-column">
+          <div className="col-md-8 col-10 mx-auto tab-column">
             <div className="text-center p-3">
             <button className="btn home-heading-2">
               <div className="inside-btn">
@@ -303,7 +301,7 @@ export default function Home() {
            
           
 
-            <Tabs defaultActiveKey="1" tabPosition="left">
+            <Tabs defaultActiveKey="1" tabPosition="left" className="desktop-tab">
               {
                 data.map((e) => {
                   return (
@@ -327,6 +325,41 @@ export default function Home() {
                             <h5 className="card-title">{e.title}</h5>
                             <h5 className="card-title">Price: {e.price}</h5>
                             <a href="#" class="btn btn-primary">Go somewhere</a>
+                          </div>
+                          </div>
+                          
+                        </div>
+                      </TabPane>
+                    </>
+                  )
+                })
+              }
+            </Tabs>
+
+            <Tabs defaultActiveKey="1" tabPosition="top" className="mobile-tab">
+              {
+                data.map((e) => {
+                  return (
+                    <>
+                      <TabPane className="tab-title" tab={e.title} key={e.id}>
+                        <div className="card">
+                          <div className="tab-card">
+                          <div>   
+                          <img src={e.url} className="card-img-top tab-card-image" alt="..." />
+                          </div>
+                          <div className="card-body">
+                            <div className="view-div">
+                            <i className="ri-focus-2-fill pt-lg-1 pe-2"></i>
+                          <h5 className="card-title tab-card-title">{e.view}</h5>
+                            </div>
+                            <div className="view-div">
+                            <i class="ri-star-line pt-1 pe-2"></i>
+                            <h5 className="card-title">{e.rank}</h5>
+                            </div>
+                           
+                            <h5 className="card-title tab-card-title">{e.title}</h5>
+                            <h5 className="card-title tab-card-title">Price: {e.price}</h5>
+                            <a href="#" class="btn btn-primary tab-card-btn">Go somewhere</a>
                           </div>
                           </div>
                           
@@ -365,7 +398,7 @@ export default function Home() {
                   data2.map((e) => {
                     return (
                       <>
-                        <div className="col-md-10 mx-auto top-pick-carousel-col">
+                        <div className="col-md-10 col-8 mx-auto top-pick-carousel-col">
                           <div>
                             <div className="card card-display">
                               <video className="video-tag"
@@ -375,7 +408,7 @@ export default function Home() {
                                 <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4" type="video/mp4" />
                               </video>
                               <div className="card-body">
-                                <h5 className="card-title">{e.name}</h5>
+                                <h5 className="card-title card-title-1">{e.name}</h5>
                               </div>
                             </div>
                           </div>
@@ -393,7 +426,7 @@ export default function Home() {
         {/* spring festivals */}
 
          <div className="row top-pick-row">
-          <div className="col-md-12 text-center">
+          <div className="col-md-12 col-10 mx-auto text-center">
 
             <div class="box-1">
               <button className="btn home-heading-1">
@@ -418,12 +451,12 @@ export default function Home() {
                       return (
 
                         <>
-                          <div className="col-md-8 mx-auto top-pick-carousel-col">
+                          <div className="col-md-8 col-8 mx-auto top-pick-carousel-col">
                             <div>
                               <div className="card card-display">
                                 <img src={e.url} className="card-img-top top-pick-image" alt="..." />
                                 <div className="card-body">
-                                  <h5 className="card-title">{e.title}</h5>
+                                  <h5 className="card-title card-title-1">{e.title}</h5>
                                   <a href="#" className="btn btn-primary first-card-btn">Buy Now</a>
                                 </div>
                               </div>

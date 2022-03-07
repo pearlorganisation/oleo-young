@@ -3,7 +3,7 @@ import React from "react"
 export default function Navbar(){
     return(
         <>
-        <div className="container-fluid">
+        <div className="container-fluid p-0 nav-container">
             <div className="row">
                 <div className="col-md-10 mx-auto">
                 <nav className="navbar navbar-expand-lg navbar-light bg-light">
