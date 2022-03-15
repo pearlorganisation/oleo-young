@@ -5,6 +5,9 @@ import Image1 from "../images/female.jpg"
 import Image2 from "../images/creame2.jpg"
 import Tabs, { TabPane } from 'rc-tabs';
 import '../../node_modules/rc-tabs/assets/index.css';
+import image1 from "../images/topstoryslider1.jpg"
+import image2 from "../images/topstoryslider2.jpg"
+import image3 from "../images/topstoryslider3.jpg"
 
 
 export default function Home() {
@@ -116,7 +119,46 @@ export default function Home() {
     }
 
   ]
+  const topstorydata = [
+    {
+      "id": 1,
+      "title": "Fashion Youtuber recommended",
+      "url": image1,
+       "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, magnam!"
+    },
+    {
+      "id": 2,
+      "title": "Dancers recommended",
+      "url": image2,
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, magnam!"
+    },
 
+    {
+      "id": 3,
+      "title": "Hand Cream recommended",
+      "url": image3,
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, magnam!"
+    },
+    {
+      "id": 4,
+      "title": "Easy Cooking at the camps",
+      "url": image1,
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, magnam!"
+    },
+    {
+      "id": 5,
+      "title": "Hair item recommended",
+      "url": image2,
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, magnam!"
+    },
+    {
+      "id": 6,
+      "title": "Futsaler recommended",
+      "url": image3,
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, magnam!"
+    }
+
+  ]
   const data1 = [
     {
       "id": 1,
@@ -204,11 +246,11 @@ export default function Home() {
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
-      items: 5
+      items: 3
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 5
+      items: 3
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
@@ -219,6 +261,7 @@ export default function Home() {
       items: 1
     }
   };
+  
 
   return (
     <>
@@ -226,50 +269,49 @@ export default function Home() {
 
         {/* top picks for you  */}
 
-        <div className="row top-pick-row">
-          <div className="col-md-12 col-10 mx-auto text-center">
+        <div className="row">
+          <div className="col-md-8 col-10 mx-auto">
 
             <div class="box-1">
-              <button className="btn home-heading-1">
-                <div className="inside-btn">
-                  <div>
-                    <i className="ri-vip-crown-2-line"></i>
-                  </div>
+              <h1 className="top-pick-heading">
+
                   Top Picks For You
-                  <div>
-                    <i className="ri-vip-crown-2-line"></i>
-                  </div>
-                </div>
-              </button>
+                  
+              </h1>
 
-              <hr />
+              {/* slider */}
 
-              <div className="row">
-                <Carousel responsive={responsive}>
+             <div class="row top-pick-slider-div">
+             <Carousel responsive={responsive} class="p-1">
                   {
                     data.map((e) => {
 
                       return (
 
                         <>
-                          <div className="col-md-8 col-8 mx-auto top-pick-carousel-col">
-                            <div>
-                              <div className="card card-display">
+                        
+                           <div class="col-md-11 mx-auto">
+                           <div className="card card-display text-center">
                                 <img src={e.url} className="card-img-top top-pick-image" alt="..." />
                                 <div className="card-body">
                                   <h5 className="card-title card-title-1">{e.title}</h5>
                                   <a href="#" className="btn btn-primary first-card-btn">Buy Now</a>
                                 </div>
                               </div>
-                            </div>
-                          </div>
+                           </div>
+                              
+                           
+                         
                         </>
 
                       )
                     })
                   }
                 </Carousel>
-              </div>
+             </div>
+                
+                {/* sliderends */}
+          
             </div>
 
 
@@ -281,26 +323,20 @@ export default function Home() {
         {/* Real Time View Ranking */}
 
          <div className="row">
-          <div className="col-md-8 col-10 mx-auto tab-column">
-            <div className="text-center p-3">
-            <button className="btn home-heading-2">
-              <div className="inside-btn">
-                <div>
-                  <i className="ri-timer-2-line"></i>
-                </div>
-                Real Time View Ranking
-                <div>
-                  <i className="ri-timer-2-line"></i>
-                </div>
-              </div>
-            </button>
-            <hr />
+          <div className="col-md-8 mx-auto col-10 tab-column">
+           
+            <h2 className="ranking-heading">
 
-            </div>
+                Real Time View Ranking
+                
+            </h2>
+
+            
+            {/* <hr /> */}
 
            
-          
-
+          <div className="row ranking-tab-div">
+            <div className="col-md-12">
             <Tabs defaultActiveKey="1" tabPosition="left" className="desktop-tab">
               {
                 data.map((e) => {
@@ -371,27 +407,73 @@ export default function Home() {
               }
             </Tabs>
 
+            </div>
+          </div>
+     
           </div>
         </div>
 
+        {/* Todays story */}
+
+        <div className="row">
+          <div className="col-md-8 mx-auto col-10">
+
+           
+              <h2 className="today-story-heading">
+                
+                  Today's Story
+                  
+              </h2>
+
+              {/* <hr /> */}
+
+              <div className="row">
+                <Carousel responsive={responsive}>
+                  {
+                    topstorydata.map((e) => {
+
+                      return (
+
+                        <>
+                          <div className="col-md-11 col-8 mx-auto">
+                            <div>
+                              <div className="card card-display">
+                                <img src={e.url} className="card-img-top top-pick-image" alt="..." />
+                                <div className="card-body">
+                                  <h5 className="card-title card-title-1">{e.title}</h5>
+                                  <p className="card-text">{e.desc}</p>
+                                  {/* <a href="#" className="btn btn-primary first-card-btn">Buy Now</a> */}
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </>
+
+                      )
+                    })
+                  }
+                </Carousel>
+              </div>
+              
+            
+
+
+          </div>
+
+
+        </div>
+
+
         {/* todays a whole vibe */}
 
-        <div className="row top-pick-row">
+        <div className="row">
 
-          <div className="col-md-12 col-10 mx-auto text-center">
-            <button className="btn home-heading-1">
-              <div className="inside-btn">
-                <div>
-                  <i className="ri-flashlight-fill"></i>
-                </div>
+          <div className="col-md-8 col-10 mx-auto">
+            <h2 className="wholevibe-heading">
                 Today&lsquo;s A Whole Vibe
-                <div>
-                  <i className="ri-flashlight-fill"></i>
-                </div>
-              </div>
-            </button>
+            </h2>
 
-            <hr />
+           
             <div className="row">
               <Carousel responsive={responsive}>
                 {
@@ -426,22 +508,16 @@ export default function Home() {
         {/* spring festivals */}
 
          <div className="row top-pick-row">
-          <div className="col-md-12 col-10 mx-auto text-center">
+          <div className="col-md-8 col-10 mx-auto">
 
             <div class="box-1">
-              <button className="btn home-heading-1">
-                <div className="inside-btn">
-                  <div>
-                    <i className="ri-vip-crown-2-line"></i>
-                  </div>
+              <h2 className="wholevibe-heading">
+                
                   Spring Festival 30-70% Off
-                  <div>
-                    <i className="ri-vip-crown-2-line"></i>
-                  </div>
-                </div>
-              </button>
+                  
+              </h2>
 
-              <hr />
+          
 
               <div className="row">
                 <Carousel responsive={responsive}>
@@ -451,7 +527,7 @@ export default function Home() {
                       return (
 
                         <>
-                          <div className="col-md-8 col-8 mx-auto top-pick-carousel-col">
+                          <div className="col-md-11 col-8 mx-auto top-pick-carousel-col">
                             <div>
                               <div className="card card-display">
                                 <img src={e.url} className="card-img-top top-pick-image" alt="..." />
