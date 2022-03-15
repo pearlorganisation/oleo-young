@@ -2,6 +2,7 @@ import React from "react";
 import Image1 from "../../images/know-how-card-img.webp"
 import Image2 from "../../images/know-how-card-img2.webp"
 import Image3 from "../../images/know-how-card-img3.webp"
+import { Link } from "react-router-dom";
 
 
 
@@ -72,6 +73,7 @@ export default function Knowhow() {
             "image" : Image2
         }
     ]
+    console.log(data)
     return (
         <>
             <div className="container-fluid">
@@ -86,7 +88,8 @@ export default function Knowhow() {
                                 return (
                                     <>
                                     <div className="col-md-4 know-how-card-column" key={e.id}>
-                                    <div class="card">
+                                        <Link to={`/knowhow/${e.id}`} className="know-how-link">
+                                        <div class="card">
                                         <div className="know-how-card">
                                             <img src={e.image} className="card-img-top know-how-card-image" alt="..." />
                                         </div>
@@ -103,6 +106,8 @@ export default function Knowhow() {
                                                 </div>
                                             </div>
                                         </div>
+                                        </Link>
+                                    
                                     </div>
                                     </>
                                 )

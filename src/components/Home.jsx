@@ -8,7 +8,9 @@ import '../../node_modules/rc-tabs/assets/index.css';
 import image1 from "../images/topstoryslider1.jpg"
 import image2 from "../images/topstoryslider2.jpg"
 import image3 from "../images/topstoryslider3.jpg"
-
+import toppick1 from "../images/cream.jpg"
+import toppick2 from "../images/makeup.jpg"
+import toppick3 from "../images/shavingcream.jpg"
 
 export default function Home() {
 
@@ -71,7 +73,7 @@ export default function Home() {
     {
       "id": 1,
       "title": "Face Cream",
-      "url": "https://cdn.pixabay.com/photo/2016/04/13/22/26/cream-1327847_960_720.jpg",
+      "image": toppick1,
        "view": 1450,
        "price": "139",
        "rank": 1
@@ -79,7 +81,7 @@ export default function Home() {
     {
       "id": 2,
       "title": "Makeup Brush",
-      "url": "https://cdn.pixabay.com/photo/2016/10/06/21/11/brush-1720073_960_720.jpg",
+      "image": toppick2,
       "view": 1350,
        "price": "119",
        "rank": 2
@@ -88,7 +90,7 @@ export default function Home() {
     {
       "id": 3,
       "title": "Shaving Cream",
-      "url": "https://cdn.pixabay.com/photo/2014/08/10/18/00/razor-414909_960_720.jpg",
+      "image": toppick3,
       "view": 1250,
        "price": "139",
        "rank": 3
@@ -96,7 +98,7 @@ export default function Home() {
     {
       "id": 4,
       "title": "Cream xyz",
-      "url": "https://cdn.pixabay.com/photo/2016/04/13/22/26/cream-1327847_960_720.jpg",
+      "image": toppick1,
       "view": 1150,
        "price": "159",
        "rank": 4
@@ -104,7 +106,7 @@ export default function Home() {
     {
       "id": 5,
       "title": "Makeup",
-      "url": "https://cdn.pixabay.com/photo/2016/10/06/21/11/brush-1720073_960_720.jpg",
+      "image": toppick2,
       "view": 1050,
        "price": "129",
        "rank": 5
@@ -112,7 +114,7 @@ export default function Home() {
     {
       "id": 6,
       "title": "Cream",
-      "url": "https://cdn.pixabay.com/photo/2014/08/10/18/00/razor-414909_960_720.jpg",
+      "image": toppick3,
       "view": 950,
        "price": "179",
        "rank": 6
@@ -158,51 +160,6 @@ export default function Home() {
       "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, magnam!"
     }
 
-  ]
-  const data1 = [
-    {
-      "id": 1,
-      "title": "Face Cream",
-      "rank": 1,
-      "image": Image1,
-      "view": 413
-    },
-    {
-      "id": 2,
-      "name": "Ilarika Rautela",
-      "rank": 2,
-      "image": Image1
-    },
-    {
-      "id": 3,
-      "name": "Akanksha Rana",
-      "rank": 3,
-      "image": Image1
-    },
-    {
-      "id": 4,
-      "name": "Kajal Panwar",
-      "rank": 4,
-      "image": Image1
-    },
-    {
-      "id": 5,
-      "name": "Vibhanshi Singh",
-      "rank": 3,
-      "image": Image1
-    },
-    {
-      "id": 6,
-      "name": "Juhi Negi",
-      "rank": 3,
-      "image": Image1
-    },
-    {
-      "id": 7,
-      "name": "Sonali Panwar",
-      "rank": 3,
-      "image": Image1
-    }
   ]
 
   const data2 = [
@@ -290,9 +247,9 @@ export default function Home() {
 
                         <>
                         
-                           <div class="col-md-11 mx-auto">
+                           <div className="col-md-11 mx-auto">
                            <div className="card card-display text-center">
-                                <img src={e.url} className="card-img-top top-pick-image" alt="..." />
+                                <img src={e.image} className="card-img-top top-pick-image" alt="..." />
                                 <div className="card-body">
                                   <h5 className="card-title card-title-1">{e.title}</h5>
                                   <a href="#" className="btn btn-primary first-card-btn">Buy Now</a>
@@ -346,7 +303,7 @@ export default function Home() {
                         <div className="card">
                           <div className="tab-card">
                           <div>   
-                          <img src={e.url} className="card-img-top tab-card-image" alt="..." />
+                          <img src={e.image} className="card-img-top tab-card-image" alt="..." />
                           </div>
                           <div className="card-body">
                             <div className="view-div">
@@ -354,13 +311,13 @@ export default function Home() {
                           <h5 className="card-title">{e.view}</h5>
                             </div>
                             <div className="view-div">
-                            <i class="ri-star-line pt-1 pe-2"></i>
+                            <i className="ri-star-line pt-1 pe-2"></i>
                             <h5 className="card-title">{e.rank}</h5>
                             </div>
                            
                             <h5 className="card-title">{e.title}</h5>
                             <h5 className="card-title">Price: {e.price}</h5>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <a href="#" className="btn btn-primary">Go somewhere</a>
                           </div>
                           </div>
                           
@@ -381,7 +338,7 @@ export default function Home() {
                         <div className="card">
                           <div className="tab-card">
                           <div>   
-                          <img src={e.url} className="card-img-top tab-card-image" alt="..." />
+                          <img src={e.image} className="card-img-top tab-card-image" alt="..." />
                           </div>
                           <div className="card-body">
                             <div className="view-div">
@@ -510,7 +467,7 @@ export default function Home() {
          <div className="row top-pick-row">
           <div className="col-md-8 col-10 mx-auto">
 
-            <div class="box-1">
+            <div className="box-1">
               <h2 className="wholevibe-heading">
                 
                   Spring Festival 30-70% Off
@@ -530,7 +487,7 @@ export default function Home() {
                           <div className="col-md-11 col-8 mx-auto top-pick-carousel-col">
                             <div>
                               <div className="card card-display">
-                                <img src={e.url} className="card-img-top top-pick-image" alt="..." />
+                                <img src={e.image} className="card-img-top top-pick-image" alt="..." />
                                 <div className="card-body">
                                   <h5 className="card-title card-title-1">{e.title}</h5>
                                   <a href="#" className="btn btn-primary first-card-btn">Buy Now</a>
