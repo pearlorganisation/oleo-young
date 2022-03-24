@@ -43,7 +43,7 @@ export default function Header(){
                         <i className="ri-shopping-bag-line header-btn-icon"></i>
                         </div>
                         <div className="ms-1">
-                        Bag()
+                        Bag(0)
                         </div>
                       
                         </div>
@@ -74,53 +74,53 @@ export default function Header(){
                     Category
                     {/* </button> */}
             </a>
-            <ul class="dropdown-menu dropdown-container" aria-labelledby="navbarDropdown">
+            <ul className="dropdown-menu dropdown-container" aria-labelledby="navbarDropdown">
                 <div className="row">
                     <div className="col-md-2">
-                    <li><a class="dropdown-item" href="#">Basic Cosmetics</a></li>
+                    <li><a className="dropdown-item" href="#">Basic Cosmetics</a></li>
                     </div>
                     <div className="col-md-2">
-             <li><a class="dropdown-item" href="#">Dermo Cosmetics</a></li>
+             <li><a className="dropdown-item" href="#">Dermo Cosmetics</a></li>
 
                     </div>
                     <div className="col-md-2">
 
-             <li><a class="dropdown-item" href="#">Makeup and Nails</a></li>
+             <li><a className="dropdown-item" href="#">Makeup and Nails</a></li>
                     </div>
                     <div className="col-md-2">
-             <li><a class="dropdown-item" href="#">Body Care</a></li>
+             <li><a className="dropdown-item" href="#">Body Care</a></li>
 
                     </div>
                     <div className="col-md-2">
                     <li><a className="dropdown-item" href="#">Hair Care</a></li>
                     </div>
                     <div className="col-md-2">
-                    <li><a class="dropdown-item" href="#">Perfume/Diffuser</a></li>
+                    <li><a className="dropdown-item" href="#">Perfume/Diffuser</a></li>
                     </div>
 
                     <div className="col-md-2">
-                    <li><a class="dropdown-item" href="#">Beauty Accessories</a></li>
+                    <li><a className="dropdown-item" href="#">Beauty Accessories</a></li>
                     </div>
                     <div className="col-md-2">
-            <li><a class="dropdown-item" href="#">Male</a></li>
+            <li><a className="dropdown-item" href="#">Male</a></li>
 
                     </div>
                     <div className="col-md-2">
 
-            <li><a class="dropdown-item" href="#">Health/Sanitary</a></li>
+            <li><a className="dropdown-item" href="#">Health/Sanitary</a></li>
                     </div>
                     <div className="col-md-2">
-            <li><a class="dropdown-item" href="#">Food</a></li>
+            <li><a className="dropdown-item" href="#">Food</a></li>
 
                     </div>
                     <div className="col-md-2">
                     <li><a className="dropdown-item" href="#">Life/Home</a></li>
                     </div>
                     <div className="col-md-2">
-                    <li><a class="dropdown-item" href="#">Pet</a></li>
+                    <li><a className="dropdown-item" href="#">Pet</a></li>
                     </div>
                     <div className="col-md-2">
-                    <li><a class="dropdown-item" href="#">Baby</a></li>
+                    <li><a className="dropdown-item" href="#">Baby</a></li>
                     </div>
                 </div>
           </ul>
@@ -129,72 +129,65 @@ export default function Header(){
         <li className="nav-item">
        
             <a className="nav-link  navbar-btn" href="/" aria-current="page">
-                {/* <button className="btn  navbar-btn"> */}
+           
                     Ranking
-                    {/* </button> */}
+                   
             </a>
             
         </li>
         <li className="nav-item">
        
             <a className="nav-link  navbar-btn" href="/" aria-current="page">
-                {/* <button className="btn  navbar-btn"> */}
+             
                     Following
-                    {/* </button> */}
+                   
             </a>
             
         </li>
-        <li className="nav-item">
-       
-            <a className="nav-link  navbar-btn" href="/" aria-current="page">
-                {/* <button className="btn  navbar-btn"> */}
-                    Creaters
-                    {/* </button> */}
-            </a>
-            
-        </li>
+        
         <li className="nav-item">
        
             <Link className="nav-link  navbar-btn" to="knowhow" aria-current="page">
-                {/* <button className="btn  navbar-btn"> */}
+             
                     Know How
-                    {/* </button> */}
+                  
             </Link>
             
         </li>
         <li className="nav-item">
        
-            <a className="nav-link  navbar-btn" to="/" aria-current="page">
-                {/* <button className="btn  navbar-btn"> */}
-                    Beauty Services
-                    {/* </button> */}
-            </a>
-            
-        </li>
+       <Link className="nav-link  navbar-btn" to="/questions" aria-current="page">
+          
+               Q&N
+              
+       </Link>
+       
+   </li>
         <li className="nav-item">
        
             <a className="nav-link  navbar-btn" to="/" aria-current="page">
-                {/* <button className="btn  navbar-btn"> */}
-                    Conscious services
-                    {/* </button> */}
+            
+                    Team Buy
+                   
             </a>
             
         </li>
         <li className="nav-item">
        
-            <a className="nav-link  navbar-btn" href="/" aria-current="page">
-                {/* <button className="btn  navbar-btn"> */}
-                    Q&N
-                    {/* </button> */}
+            <a className="nav-link  navbar-btn" to="/" aria-current="page">
+              
+                  Oleo Live
+                    
             </a>
             
         </li>
+
         <li className="nav-item">
        
             <a className="nav-link  navbar-btn" href="/" aria-current="page">
-                {/* <button className="btn  navbar-btn"> */}
-                    Men
-                    {/* </button> */}
+               
+                    Beauty services
+                  
             </a>
             
         </li>

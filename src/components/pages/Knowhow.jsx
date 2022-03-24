@@ -1,7 +1,8 @@
 import React from "react";
-import Image1 from "../../images/know-how-card-img.webp"
-import Image2 from "../../images/know-how-card-img2.webp"
-import Image3 from "../../images/know-how-card-img3.webp"
+import Image1 from "../../images/cream.jpg"
+import Image2 from "../../images/shavingcream.jpg"
+import Image3 from "../../images/makeup.jpg"
+import Image4 from "../../images/know-how-detail-img.webp"
 import { Link } from "react-router-dom";
 
 
@@ -10,67 +11,92 @@ export default function Knowhow() {
     const data = [
         {
             "id": 1,
-            "title": "A plan terrier for the idiots!",
+            "title": "Face Cream",
             "subtitle": "xoxo",
             "hits": 1250,
             "scrap": 59,
-            "image" : Image1
+            "productimage" : Image1,
+            "userimage" : Image4,
+            // "productimage" : 
+            "date": "10-3-2022",
+            "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere ipsam ut cum saepe expedita. Excepturi ex quaerat debitis sit illo.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere ipsam ut cum saepe expedita. Excepturi ex quaerat debitis sit illo."
         },
         {
             "id": 2,
-            "title": "The Feeling of a vintage movie",
+            "title": "Shaving Cream",
             "subtitle": "yoyo",
             "hits": "1250",
             "scrap": 79,
-            "image" : Image2
+            "productimage" : Image2,
+            "userimage" : Image4,
+           "date" : "10-3-2022",
+           "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere ipsam ut cum saepe expedita. Excepturi ex quaerat debitis sit illo.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere ipsam ut cum saepe expedita. Excepturi ex quaerat debitis sit illo."
         },
         {
             "id": 3,
-            "title": "Only 7 million won !",
+            "title": "Makeup Brush",
             "subtitle": "vovo",
             "hits": 1250,
             "scrap": 29,
-            "image" : Image3
+            "productimage" : Image3,
+            "userimage" : Image4,
+           "date" : "10-3-2022",
+           "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere ipsam ut cum saepe expedita. Excepturi ex quaerat debitis sit illo.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere ipsam ut cum saepe expedita. Excepturi ex quaerat debitis sit illo."
         },
         {
             "id": 4,
-            "title": "Secret Hipsteter challenge EP1",
+            "title": "Face cream",
             "subtitle": "lolo",
             "hits": 1250,
             "scrap": 49,
-            "image" : Image1
+            "productimage" : Image1,
+            "userimage" : Image4,
+           "date" : "10-3-2022",
+           "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere ipsam ut cum saepe expedita. Excepturi ex quaerat debitis sit illo.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere ipsam ut cum saepe expedita. Excepturi ex quaerat debitis sit illo."
         },
         {
             "id": 5,
-            "title": "Only 7 million won !",
+            "title": "Shaving cream",
             "subtitle": "koko",
             "hits": 1250,
             "scrap": 59,
-            "image" : Image2
+            "productimage" : Image2,
+            "userimage" : Image4,
+           "date" : "10-3-2022",
+           "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere ipsam ut cum saepe expedita. Excepturi ex quaerat debitis sit illo.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere ipsam ut cum saepe expedita. Excepturi ex quaerat debitis sit illo."
         },
         {
             "id": 6,
-            "title": "A plan terrier for the idiots!",
+            "title": "Makeup brush",
             "subtitle": "xoxo",
             "hits": 1250,
             "scrap": "59",
-            "image" : Image3
+            "productimage" : Image3,
+            "userimage" : Image4,
+           "date" : "10-3-2022",
+           "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere ipsam ut cum saepe expedita. Excepturi ex quaerat debitis sit illo.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere ipsam ut cum saepe expedita. Excepturi ex quaerat debitis sit illo."
         },
         {
             "id": 7,
-            "title": "Only 7 million won !",
+            "title": "Face Cream",
             "subtitle": "xoxo",
             "hits": 1250,
             "scrap": "59",
-            "image" : Image1
+            "productimage" : Image1,
+            "userimage" : Image4,
+           "date" : "10-3-2022",
+           "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere ipsam ut cum saepe expedita. Excepturi ex quaerat debitis sit illo.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere ipsam ut cum saepe expedita. Excepturi ex quaerat debitis sit illo."
         },
         {
             "id": 8,
-            "title": "A plan terrier for the idiots!",
+            "title": "Shaving cream",
             "subtitle": "xoxo",
             "hits": 1250,
             "scrap": 59,
-            "image" : Image2
+            "productimage" : Image2,
+            "userimage" : Image4,
+           "date" : "10-3-2022",
+           "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere ipsam ut cum saepe expedita. Excepturi ex quaerat debitis sit illo.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere ipsam ut cum saepe expedita. Excepturi ex quaerat debitis sit illo."
         }
     ]
     console.log(data)
@@ -89,13 +115,13 @@ export default function Knowhow() {
                                     <>
                                     <div className="col-md-4 know-how-card-column" key={e.id}>
                                         <Link to={`/knowhow/${e.id}`} className="know-how-link">
-                                        <div class="card">
+                                        <div className="card">
                                         <div className="know-how-card">
-                                            <img src={e.image} className="card-img-top know-how-card-image" alt="..." />
+                                            <img src={e.productimage} className="card-img-top know-how-card-image" alt="..." />
                                         </div>
-                                            <div class="card-body">
+                                            <div className="card-body">
                                                 <h5 className="card-title know-how-title-1">{e.title}</h5>
-                                                <h6 className="card-title know-how-title-2">{e.subtitle}</h6>
+                                                <h6 className="card-title know-how-title-2">{e.username}</h6>
                                                 <div className="know-how-card-display">
                                                     <p className="know-how-hits">
                                                     {e.hits} Hits

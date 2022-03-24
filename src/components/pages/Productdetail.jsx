@@ -1,15 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { useParams } from "react-router"
 import Image1 from "../../images/cream.jpg"
 import Image2 from "../../images/shavingcream.jpg"
 import Image3 from "../../images/makeup.jpg"
 import Image4 from "../../images/know-how-detail-img.webp"
-import { ProSidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
-// import 'react-pro-sidebar/dist/css/styles.css';
-// import '~react-pro-sidebar/dist/scss/styles.scss';
 
-export default function Knowhowdetail() {
+export default function Productdetail(){
+
     const data = [
         {
             "id": 1,
@@ -118,78 +115,30 @@ export default function Knowhowdetail() {
         }
     ]
 
+
     const proid = useParams();
     const proDetails = data.filter(x => x.id == proid.id);
     const product = proDetails[0];
 
-    return (
+    return(
         <>
-            <div className="container-fluid">
-                <div className="row">
-
-                    <div className="col-md-8 mx-auto">
-                        <div className="row">
-                            <div className="col-md-8">
-                                <h2 className="know-how-detail-heading">{product.title}</h2>
-                                <div className="know-how-detail-top-display">
-                                    <Link className="know-how-detail-display" to="/"
-                                    //  to={`/user/${product.id}`}
-                                     >
-                                        <img className="know-how-detail-img" src={product.userimage} alt="..." />
-                                        <div>
-                                            <h6 className="know-how-detail-subtitle">{product.username}</h6>
-                                            <h6 className="know-how-detail-subtitle-1">{product.date}</h6>
-                                        </div>
-                                    </Link>
-                                    <div>
-                                        <button className="btn btn-primary">
-                                            <div className="follow-btn-div">
-                                                <div className="know-how-follow-btn">
-                                                    <i className="ri-add-line mt-1"></i>
-                                                </div>
-                                                Follow
-                                            </div>
-                                        </button>
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <p className="know-how-detail-desc">{product.desc}</p>
-                                    <div className="know-how-product-image-div">
-                                        <img src={product.productimage} alt="..." className="know-how-product-image" />
-                                        <Link className="know-how-product-image-icon" to={`/product/${product.id}`}>
-                                            <i className="ri-add-line mt-1"></i>
-                                        </Link>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-md-4">
-
-                                <div className="position-fixed know-how-detail-sidebar">
-                                    <Link className="position-absolute sidebar-icons" to="/">
-                                    <i className="ri-instagram-fill"></i>
-                                    </Link>
-                                    <Link className="position-absolute sidebar-icons-1" to="/">
-                                    <i className="ri-facebook-circle-fill"></i>
-                                    </Link>
-                                    <Link className="position-absolute sidebar-icons-2" to="/">
-                                    <i className="ri-pinterest-fill"></i>
-                                    </Link>
-                                    <Link className="position-absolute sidebar-icons-3" to="/">
-                                    <i className="ri-youtube-fill"></i>
-                                    </Link>
-                                    <Link className="position-absolute sidebar-icons-4" to="/">
-                                    <i className="ri-snapchat-fill"></i>
-                                    </Link>
-                                </div>
-
-                            </div>
-                        </div>
-
-                    </div>
-
+        <div className="container-fluid">
+            <div className="row">
+                <div className="col-md-8 mx-auto">
+                  <div className="row">
+                      <div className="col-md-6">
+                      <img src={product.productimage} alt="..." className="product-image" />
+                      </div>
+                      <div className="col-md-6">
+                          <h6 className="product-main-heading">
+                              {product.title}
+                          </h6>
+                          <p className="product-desc">{product.desc}</p>
+                      </div>
+                  </div>
                 </div>
             </div>
+        </div>
         </>
     )
 }
