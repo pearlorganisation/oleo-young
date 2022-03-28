@@ -12,6 +12,9 @@ import toppick1 from "../images/cream.jpg"
 import toppick2 from "../images/makeup.jpg"
 import toppick3 from "../images/shavingcream.jpg"
 import HomeTabs from "./homecomponents/Tab";
+import Topslider from "./homecomponents/Hometopslider";
+import Homesecondslider from "./homecomponents/Homesecondslider";
+
 export default function Home() {
 
   const sliderData = [
@@ -109,6 +112,7 @@ export default function Home() {
     }
 
   ]
+
   const topstorydata = [
     {
       "id": 1,
@@ -207,7 +211,6 @@ export default function Home() {
     }
   };
 
-
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
@@ -227,7 +230,6 @@ export default function Home() {
     }
   };
 
-
   return (
     <>
 
@@ -235,7 +237,7 @@ export default function Home() {
 
         {/* top slider */}
 
-        <div className="row">
+       {/* <div className="row">
           <div className="col-md-8 mx-auto slider-container">
 
             <h2 className="top-slider-heading">
@@ -260,8 +262,10 @@ export default function Home() {
             </Carousel>
 
           </div>
-        </div>
+        </div>  */}
 
+        <Topslider />
+{/* 
         <div className="row">
           <div className="col-md-8 mx-auto top-second-slider-container">
 
@@ -292,9 +296,11 @@ export default function Home() {
             </Carousel>
 
           </div>
-        </div>
+        </div> */}
 
         {/* tab section */}
+
+        <Homesecondslider />
 
         <div className="row">
           <div className="col-md-8 mx-auto top-tab-container">
@@ -349,6 +355,7 @@ export default function Home() {
             </h2>
 
             {/* <hr /> */}
+
 
             <div className="row">
               <Carousel responsive={responsive}>
@@ -482,7 +489,7 @@ export default function Home() {
 
 
         {/* todays a whole vibe */}
-
+{/* 
         <div className="row">
 
           <div className="col-md-8 col-10 mx-auto">
@@ -521,11 +528,11 @@ export default function Home() {
 
           </div>
 
-        </div>
+        </div> */}
 
         {/* spring festivals */}
 
-        <div className="row top-pick-row">
+        {/* <div className="row top-pick-row">
           <div className="col-md-8 col-10 mx-auto">
 
             <div className="box-1">
@@ -569,7 +576,7 @@ export default function Home() {
           </div>
 
 
-        </div>
+        </div> */}
 
       </div>
 

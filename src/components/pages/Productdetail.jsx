@@ -115,7 +115,6 @@ export default function Productdetail(){
         }
     ]
 
-
     const proid = useParams();
     const proDetails = data.filter(x => x.id == proid.id);
     const product = proDetails[0];

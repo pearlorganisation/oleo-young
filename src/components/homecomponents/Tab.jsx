@@ -6,6 +6,8 @@ import TabPanelUnstyled from '@mui/base/TabPanelUnstyled';
 import { buttonUnstyledClasses } from '@mui/base/ButtonUnstyled';
 import TabUnstyled, { tabUnstyledClasses } from '@mui/base/TabUnstyled';
 import All from './tabcomponents/All';
+import Risingstar from './tabcomponents/Risingstar';
+import Trending from './tabcomponents/Trending';
 
 const blue = {
   50: '#F0F7FF',
@@ -65,7 +67,7 @@ const TabPanel = styled(TabPanelUnstyled)`
 
 const TabsList = styled(TabsListUnstyled)`
   min-width: 320px;
-  background-color: ${blue[500]};
+  background-color: ${blue[900]};
   border-radius: 8px;
   margin-bottom: 16px;
   display: flex;
@@ -89,8 +91,16 @@ export default function UnstyledTabsCustomized() {
       <All />
 
       </TabPanel>
-      <TabPanel value={1}>Second content</TabPanel>
-      <TabPanel value={2}>Third content</TabPanel>
+      <TabPanel value={1}>
+
+         <Risingstar />
+
+      </TabPanel>
+      <TabPanel value={2}>
+
+       <Trending />
+
+      </TabPanel>
       <TabPanel value={3}>Third content</TabPanel>
       <TabPanel value={4}>Third content</TabPanel>
     </TabsUnstyled>
