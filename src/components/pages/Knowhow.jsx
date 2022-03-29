@@ -115,7 +115,7 @@ export default function Knowhow() {
                                     <>
                                     <div className="col-md-4 know-how-card-column" key={e.id}>
                                         <Link to={`/knowhow/${e.id}`} className="know-how-link">
-                                        <div className="card">
+                                        <div className="card know-how-card-div">
                                         <div className="know-how-card">
                                             <img src={e.productimage} className="card-img-top know-how-card-image" alt="..." />
                                         </div>
