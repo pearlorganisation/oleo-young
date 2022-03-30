@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router"
 import Image1 from "../../images/cream.jpg"
@@ -10,6 +10,9 @@ import { ProSidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
 // import '~react-pro-sidebar/dist/scss/styles.scss';
 
 export default function Knowhowdetail() {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
     const data = [
         {
             "id": 1,

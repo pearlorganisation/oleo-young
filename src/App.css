@@ -585,35 +585,40 @@ padding-top:1px
   height:500px
 }
 .sidebar-icons{
-  top:200px;
+  top:190px;
   color:grey;
   font-size: 48px;
   left: 200px;
   text-decoration: none;
 }
 .sidebar-icons-1{
-  top:250px;
+  top:240px;
   color:grey;
   font-size: 48px;
   left: 200px;
   text-decoration: none;
 }
+.risingstar-text{
+  font-size: 16px;
+  color: black;
+  margin-top:12px;
+}
 .sidebar-icons-2{
-  top:300px;
+  top:290px;
   color:grey;
   font-size: 48px;
   left: 200px;
   text-decoration: none;
 }
 .sidebar-icons-3{
-  top:350px;
+  top:340px;
   color:grey;
   font-size: 48px;
   left: 200px;
   text-decoration: none;
 }
 .sidebar-icons-4{
-  top:400px;
+  top:390px;
   color:grey;
   font-size: 48px;
   left: 200px;

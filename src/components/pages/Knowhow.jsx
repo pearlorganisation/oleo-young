@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Image1 from "../../images/cream.jpg"
 import Image2 from "../../images/shavingcream.jpg"
 import Image3 from "../../images/makeup.jpg"
@@ -8,6 +8,9 @@ import { Link } from "react-router-dom";
 
 
 export default function Knowhow() {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
     const data = [
         {
             "id": 1,

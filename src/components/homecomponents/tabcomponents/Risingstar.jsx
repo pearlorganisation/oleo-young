@@ -101,7 +101,7 @@ export default function Risingstar() {
                                     </div>
 
                                   
-                                    <p className="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat nobis tempora tenetur obcaecati ex minus!</p>
+                                    <p className="card-text risingstar-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat nobis tempora tenetur obcaecati ex minus!</p>
                                     {/* <a href="#" class="btn btn-primary">Go somewhere</a> */}
                                 </div>
                         </div>

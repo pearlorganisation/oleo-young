@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState , useEffect } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Image1 from "../images/female.jpg"
@@ -16,6 +16,10 @@ import Topslider from "./homecomponents/Hometopslider";
 import Homesecondslider from "./homecomponents/Homesecondslider";
 
 export default function Home() {
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   const sliderData = [
     {
